@@ -5,10 +5,6 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      'xl': '1440px',
-      'md': '1024px'
-    },
     extend: {
       colors: {
         'bright-blue': '#00A3FF',

@@ -3,27 +3,18 @@ import Button from '../../components/Button/Button.tsx'
 interface CardProps {
     href: string;
     imageSource: string;
-    imageAlt: string;
     heading: string;
     description: string;
     buttonText: string;
 }
 
-export default function MainServiceSection({ href, imageSource, imageAlt, heading, description, buttonText }: CardProps) {
+export default function MainServiceSection({ href, imageSource, heading, description, buttonText }: CardProps) {
     return (
-        <div className="max-w-sm mr-4 bg-white rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href={href}>
-                <img className='object-cover aspect-square rounded-t-lg' src={imageSource} alt={imageAlt} />
-            </a>
-            <div className="p-5">
-                <a href={href}>
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-                        {heading}
-                    </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700">
-                    {description}
-                </p>
+        <div className="px-4 py-4 mx-2 lg:mx-3 text-center bg-white rounded-lg">
+            <img src={imageSource} alt={heading} className="w-full h-56 object-cover rounded-t-lg"/>
+            <div>
+                <h3 className="my-4 text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-bold">{heading}</h3>
+                <p className="mb-4 text-gray-600">{description}</p>
                 <a href={href}
                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bright-blue rounded-full hover:bg-dark-blue focus:ring-4 focus:outline-none focus:ring-blue-300">
                     {buttonText}

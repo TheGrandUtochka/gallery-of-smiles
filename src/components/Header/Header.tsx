@@ -10,33 +10,32 @@ export default function Header() {
 
     return (
         <>
-            <header className='sticky block top-0 z-50 w-full bg-white'>
-                <div className={`z-10 justify-center lg:flex lg:space-x-6`}>
-                    <a href='#'>
+            <header className='sticky block top-0 py-2 z-50 w-full bg-white border-b-2 border-neutral-200'>
+                <div className='z-10 justify-center lg:flex lg:space-x-6'>
+                    <a className='mt-1' href='#'>
                         <img src={logo} width={300} height={300} alt="Галерея улыбок"/>
                     </a>
-                    <nav className='max-lg:hidden flex items-center space-x-6 hover:fill-bright-blue'>
-                        <InfoItem icon={mapPin} text='г. Екатеринбург, ул. Авиационная, д. 57'/>
-                        <InfoItem icon={phone}>
-                            <a href='tel:+78005553535'>+7 (800) 555-35-35</a>
-                        </InfoItem>
-                        <InfoItem icon={clock} text='Пн-Вс 8:00-21:00'/>
+                    <nav className={`max-lg:hidden flex space-x-6 justify-end w-full`}>
+                        <NavItem title='О клинике'/>
+                        <NavItem title='Услуги'/>
+                        <NavItem title='Цены'/>
+                        <NavItem title='Врачи'/>
+                        <NavItem title='Отзывы'/>
+                        <NavItem title='Контакты'/>
                     </nav>
                     <nav className='lg:hidden'>
                         <BurgerMenu/>
                     </nav>
                 </div>
             </header>
-            <nav className={`max-lg:hidden flex space-x-6 justify-center py-3 w-full`}>
-                <NavItem title='О клинике'/>
-                <NavItem title='Услуги'/>
-                <NavItem title='Цены'/>
-                <NavItem title='Врачи'/>
-                <NavItem title='Отзывы'/>
-                <NavItem title='Контакты'/>
+            <nav className='py-2 flex max-lg:flex-col lg:space-x-6 hover:fill-bright-blue'>
+                <InfoItem icon={mapPin} text='г. Екатеринбург, ул. Авиационная, д. 57'/>
+                <InfoItem icon={phone}>
+                    <a href='tel:+78005553535'>+7 (800) 555-35-35</a>
+                </InfoItem>
+                <InfoItem icon={clock} text='Пн-Вс 8:00-21:00'/>
             </nav>
         </>
-
     )
         ;
 }

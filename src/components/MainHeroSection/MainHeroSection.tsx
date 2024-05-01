@@ -15,7 +15,12 @@ export default function MainHeroSection() {
                 <p className='text-white text-gray-600 text-base md:text-lg lg:text-xl mt-6 mb-8 md:my-12'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <Button isFilled={true}>Записаться на приём</Button>
+                <Button
+                        color="bg-bright-orange"
+                        link="#"
+                        className='inline-flex text-2xl hover:bg-orange-700'
+                        buttonText="Записаться на приём" />
+
             </div>
             <div className='w-full lg:max-w-lg xl:max-w-xl px-4 py-8 lg:p-0'>
                 <img src={serviceBanner} alt='Услуги' className='w-full h-auto' loading="lazy"/>

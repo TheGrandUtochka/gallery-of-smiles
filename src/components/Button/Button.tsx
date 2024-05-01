@@ -1,16 +1,21 @@
 interface ButtonProps {
-    children?: React.ReactNode;
-    hasBorder: false;
-    isFilled: false;
+    color?: string;
+    link?: string;
+    iconSrc?: string; // Путь к изображению или SVG
+    className?: string;
+    buttonText?: string;
 }
 
-const borderStyles = 'border-2 border-bright-blue rounded-full';
-const filledStyles = 'mx-2 mt-2 lg:mt-2 transition duration-500 text-sm bg-bright-orange font-bold text-white px-3 py-2 mx-0 hover:bg-orange-700 rounded-full';
+const Button: React.FC<ButtonProps> = ({ color, link, iconSrc, className = '', buttonText }) => {
+    // Стили для кнопки с учетом настроек цвета и при наведении
+    const buttonStyles = `transition duration-500 ${color} font-bold text-white px-3 py-2 mx-0 rounded-lg cursor-pointer ${className}`;
 
-export default function Button({ hasBorder, isFilled, children }: ButtonProps) {
     return (
-        <button className={`${hasBorder && borderStyles} ${isFilled && filledStyles}`}>
-            { children }
-        </button>
+        <a href={link} className={buttonStyles}>
+            {buttonText}
+            {iconSrc && <img src={iconSrc} alt="Icon" className="inline-block ml-2" />}
+        </a>
     );
-}
+};
+
+export default Button;

@@ -7,9 +7,10 @@ export const Route = createRootRoute({
     component: () => (
         <>
             <Wrapper>
-                <Header />
-                <Outlet />
-                <TanStackRouterDevtools />
+                <Header/>
+                <div className='pb-12'/>
+                <Outlet/>
+                <TanStackRouterDevtools/>
             </Wrapper>
         </>
     ),

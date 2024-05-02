@@ -11,9 +11,9 @@ function Index() {
     return (
         <>
             <MainHeroSection />
+            <div className='pb-12' />
             <MainServiceSection />
             <TanStackRouterDevtools />
         </>
-
     )
 }

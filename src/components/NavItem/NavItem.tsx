@@ -11,7 +11,7 @@ export default function NavItem({ title, link }: NavItemProps) {
             <div className='relative'>
                 <div className="flex space-x-2 cursor-pointer">
                     <div
-                        className='bg-neutral-200 font-medium px-3 py-2 text-black transition duration-500 rounded-full border-2 border-white hover:border-bright-blue'>
+                        className='bg-white hover:bg-gray font-medium px-3 py-2 text-black transition duration-500 rounded-full'>
                         {title}
                     </div>
                 </div>

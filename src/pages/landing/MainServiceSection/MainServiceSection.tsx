@@ -4,10 +4,10 @@ import services from "./services.ts";
 
 export default function MainServiceSection() {
     return (
-            <section className='flex-col lg:flex-row lg:justify-between bg-dark-blue py-8'>
+            <section className='flex-col lg:flex-row lg:justify-between bg-pale-silver py-8 rounded-3xl'>
                 <div
                     className='flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:px-8 xl:px-12 pb-8 '>
-                    <h2 className='mb-6 text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none'>
+                    <h2 className='mb-6 text-deep-purple-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none'>
                         Наши услуги
                     </h2>
                 </div>

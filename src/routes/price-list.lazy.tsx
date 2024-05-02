@@ -1,5 +1,6 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import PricesHeroSection from '../pages/price-list/PricesHeroSection/PricesHeroSection.tsx'
+import PricesTable from "../pages/price-list/PricesTable/PricesTable.tsx";
 
 export const Route = createLazyFileRoute('/price-list')({
   component: PriceList
@@ -7,6 +8,10 @@ export const Route = createLazyFileRoute('/price-list')({
 
 function PriceList() {
   return (
-      <PricesHeroSection />
+      <>
+          <PricesHeroSection/>
+          <div className='pb-12'/>
+          <PricesTable/>
+      </>
   )
 }

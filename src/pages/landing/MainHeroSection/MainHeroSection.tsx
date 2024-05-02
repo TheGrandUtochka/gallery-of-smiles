@@ -3,7 +3,7 @@ import serviceBanner from '../../../assets/images/service-banner.png'
 
 export default function MainHeroSection() {
     return (
-        <section className='flex flex-col-reverse lg:flex-row items-center lg:justify-between w-full bg-bright-blue rounded-t-full md:rounded-l'>
+        <section className='flex flex-col-reverse lg:flex-row items-center lg:justify-between w-full bg-rich-mahogany rounded-3xl'>
             <div className='flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:px-8 xl:px-12 py-8 '>
                 <h1 className='text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-none'>
                     Цена
@@ -16,9 +16,9 @@ export default function MainHeroSection() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
                 <Button
-                        color="bg-bright-orange"
+                        color="bg-deep-purple-black"
                         link="#"
-                        className='inline-flex text-2xl hover:bg-orange-700'
+                        className='inline-flex text-2xl hover:bg-black'
                         buttonText="Записаться на приём" />
 
             </div>

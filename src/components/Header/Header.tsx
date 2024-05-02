@@ -5,20 +5,26 @@ import clock from '../../assets/icons/clock.svg';
 import NavItem from '../NavItem/NavItem.tsx'
 import InfoItem from '../InfoItem/InfoItem.tsx'
 import BurgerMenu from '../BurgerMenu/BurgerMenu.tsx'
+import {Link} from "@tanstack/react-router";
 
 export default function Header() {
 
     return (
-        <>
-            <header className='sticky block top-0 py-2 z-50 w-full bg-white border-b-2 border-neutral-200'>
+        <div className='sticky block top-0 bg-pale-silver rounded-b-3xl py-2 px-12'>
+            <header className='z-50 w-full'>
                 <div className='z-10 justify-center lg:flex lg:space-x-6'>
-                    <a className='mt-1' href='#'>
+                    <Link to='/' className='mt-1'>
                         <img src={logo} width={300} height={300} alt="Галерея улыбок"/>
-                    </a>
+                    </Link>
                     <nav className={`max-lg:hidden flex space-x-6 justify-end w-full`}>
-                        <NavItem title='О клинике'/>
+                        <NavItem
+                            title='О клинике'
+                        />
                         <NavItem title='Услуги'/>
-                        <NavItem title='Цены'/>
+                        <NavItem
+                            title='Цены'
+                            link='/price-list'
+                        />
                         <NavItem title='Врачи'/>
                         <NavItem title='Отзывы'/>
                         <NavItem title='Контакты'/>
@@ -35,7 +41,7 @@ export default function Header() {
                 </InfoItem>
                 <InfoItem icon={clock} text='Пн-Вс 8:00-21:00'/>
             </nav>
-        </>
+        </div>
     )
         ;
 }

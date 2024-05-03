@@ -27,7 +27,10 @@ export default function Header() {
                         />
                         <NavItem title='Врачи'/>
                         <NavItem title='Отзывы'/>
-                        <NavItem title='Контакты'/>
+                        <NavItem
+                            title='Контакты'
+                            link='/contacts'
+                        />
                     </nav>
                     <nav className='lg:hidden'>
                         <BurgerMenu/>

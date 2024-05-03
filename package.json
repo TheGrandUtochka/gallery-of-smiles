@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^1.0.6",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "@tanstack/react-router": "^1.31.5",
     "headlessui": "^0.0.0",
     "heroicons": "^2.1.3",

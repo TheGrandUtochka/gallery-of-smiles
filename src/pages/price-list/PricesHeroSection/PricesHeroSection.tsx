@@ -5,10 +5,6 @@ export default function PricesHeroSection() {
                 Прайс-лист
             </h1>
             <div
-                className='pb-12 px-4 lg:px-8 xl:px-12'>
-
-            </div>
-            <div
                 className='px-4 lg:px-8 xl:px-12'>
                 <nav
                     className='px-4 lg:px-8 xl:px-12 py-8 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-none bg-white rounded-3xl'>

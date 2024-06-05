@@ -1,5 +1,9 @@
 import Button from '../../../components/Button/Button.tsx'
 import serviceBanner from '../../../assets/images/service-banner.png'
+import InfoItem from "../../../components/InfoItem/InfoItem.tsx";
+import mapPin from "../../../assets/icons/map-pin.svg";
+import phone from "../../../assets/icons/phone.svg";
+import clock from "../../../assets/icons/clock.svg";
 
 export default function MainHeroSection() {
     return (
@@ -13,13 +17,17 @@ export default function MainHeroSection() {
                     Галерея улыбок
                 </h1>
                 <p className='text-white text-gray-600 text-base md:text-lg lg:text-xl mt-6 mb-8 md:my-12'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    <InfoItem icon={mapPin} text='г. Екатеринбург, ул. Авиационная, д. 57'/>
+                    <InfoItem icon={phone}>
+                        <a href='tel:+79582349133'>+7 (958) 234-91-33</a>
+                    </InfoItem>
+                    <InfoItem icon={clock} text='Пн-Вс 8:00-21:00'/>
                 </p>
                 <Button
-                        color="bg-deep-purple-black"
-                        link="#"
-                        className='inline-flex text-2xl hover:bg-black'
-                        buttonText="Записаться на приём" />
+                    color="bg-deep-purple-black"
+                    link="#"
+                    className='inline-flex text-2xl hover:bg-black'
+                    buttonText="Записаться на приём"/>
 
             </div>
             <div className='w-full lg:max-w-lg xl:max-w-xl px-4 py-0 lg:p-0'>

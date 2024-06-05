@@ -6,7 +6,7 @@ interface InfoItemProps {
 
 export default function NavItem({ icon, text, children }: InfoItemProps) {
     return (
-        <div className='font-medium relative flex items-center text-black transition duration-500' >
+        <div className='flex items-center' >
             <img className='w-6 h-6 mr-2' src={icon} alt={text}/>
             <div>
                 {text}

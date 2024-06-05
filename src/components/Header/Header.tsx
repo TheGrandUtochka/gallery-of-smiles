@@ -1,50 +1,46 @@
 import logo from '../../assets/logo.svg';
-import mapPin from '../../assets/icons/map-pin.svg'
-import phone from '../../assets/icons/phone.svg';
-import clock from '../../assets/icons/clock.svg';
-import NavItem from '../NavItem/NavItem.tsx'
-import InfoItem from '../InfoItem/InfoItem.tsx'
-import BurgerMenu from '../BurgerMenu/BurgerMenu.tsx'
-import {Link} from "@tanstack/react-router";
+import NavItem from '../NavItem/NavItem.tsx';
+import { Link } from "@tanstack/react-router";
+import { useState } from 'react';
 
 export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
 
     return (
-        <div className='sticky block top-0 bg-pale-silver rounded-b-3xl py-2 px-12'>
-            <header className='z-50 w-full'>
-                <div className='z-10 justify-center lg:flex lg:space-x-6'>
-                    <Link to='/' className='mt-1'>
-                        <img src={logo} width={300} height={300} alt="Галерея улыбок"/>
-                    </Link>
-                    <nav className={`max-lg:hidden flex space-x-6 justify-end w-full`}>
-                        <NavItem
-                            title='О клинике'
-                        />
-                        <NavItem title='Услуги'/>
-                        <NavItem
-                            title='Цены'
-                            link='/price-list'
-                        />
-                        <NavItem title='Врачи'/>
-                        <NavItem title='Отзывы'/>
-                        <NavItem
-                            title='Контакты'
-                            link='/contacts'
-                        />
-                    </nav>
-                    <nav className='lg:hidden'>
-                        <BurgerMenu/>
-                    </nav>
-                </div>
+        <div className='sticky top-0 bg-pale-silver rounded-b-3xl py-2 px-4 md:px-12'>
+            <header className='flex justify-between items-center z-50 w-full'>
+                <Link to='/' className='mt-1'>
+                    <img src={logo} width={300} alt="Галерея улыбок" />
+                </Link>
+                <button className="lg:hidden" onClick={toggleMenu}>
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
+                    </svg>
+                </button>
+                <nav className={`hidden lg:flex space-x-6`}>
+                    <NavItem title='О клинике' />
+                    <NavItem title='Услуги' />
+                    <NavItem title='Цены' link='/price-list' />
+                    <NavItem title='Врачи' />
+                    <NavItem title='Отзывы' />
+                    <NavItem title='Контакты' link='/contacts' />
+                </nav>
             </header>
-            <nav className='py-2 flex max-lg:flex-col lg:space-x-6 hover:fill-bright-blue'>
-                <InfoItem icon={mapPin} text='г. Екатеринбург, ул. Авиационная, д. 57'/>
-                <InfoItem icon={phone}>
-                    <a href='tel:+78005553535'>+7 (800) 555-35-35</a>
-                </InfoItem>
-                <InfoItem icon={clock} text='Пн-Вс 8:00-21:00'/>
-            </nav>
+            {/* что-то потом сделать с даблкодингом */}
+            {isMenuOpen && (
+                <nav className='flex flex-col items-center justify-center space-y-4 mt-4 lg:hidden'>
+                    <NavItem title='О клинике' />
+                    <NavItem title='Услуги' />
+                    <NavItem title='Цены' link='/price-list' />
+                    <NavItem title='Врачи' />
+                    <NavItem title='Отзывы' />
+                    <NavItem title='Контакты' link='/contacts' />
+                </nav>
+            )}
         </div>
-    )
-        ;
+    );
 }

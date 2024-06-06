@@ -21,13 +21,13 @@ export default function Card({ href, imageSource, heading, description}: CardPro
                 <p className="mb-4 text-gray-600">{description}</p>
                 <div className='lg:space-x-2 max-lg:space-y-2 justify-center'>
                     <Button
-                        color="bg-deep-purple-black"
+                        color="bg-deep-purple-black text-white"
                         link="#"
                         iconSrc={arrowRight}
                         className='inline-flex hover:bg-black'
                         buttonText="Узнать подробнее" />
                     <Button
-                        color="bg-deep-purple-black"
+                        color="bg-deep-purple-black text-white"
                         link="#"
                         className='inline-flex hover:bg-black'
                         buttonText="Записаться на приём" />

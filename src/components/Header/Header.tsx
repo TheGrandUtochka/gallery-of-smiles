@@ -26,7 +26,6 @@ export default function Header() {
                     <NavItem title='Услуги' />
                     <NavItem title='Цены' link='/price-list' />
                     <NavItem title='Врачи' />
-                    <NavItem title='Отзывы' />
                     <NavItem title='Контакты' link='/contacts' />
                 </nav>
             </header>
@@ -37,7 +36,6 @@ export default function Header() {
                     <NavItem title='Услуги' />
                     <NavItem title='Цены' link='/price-list' />
                     <NavItem title='Врачи' />
-                    <NavItem title='Отзывы' />
                     <NavItem title='Контакты' link='/contacts' />
                 </nav>
             )}

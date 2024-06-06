@@ -2,6 +2,7 @@ import { createLazyFileRoute } from '@tanstack/react-router'
 import MainHeroSection from "../pages/landing/MainHeroSection/MainHeroSection.tsx";
 import MainServiceSection from "../pages/landing/MainServiceSection/MainServiceSection.tsx";
 import {TanStackRouterDevtools} from "@tanstack/router-devtools";
+import MainReviewSection from "../pages/landing/MainReviewSection/MainReviewSection.tsx";
 
 export const Route = createLazyFileRoute('/')({
     component: Index,
@@ -10,10 +11,12 @@ export const Route = createLazyFileRoute('/')({
 function Index() {
     return (
         <>
-            <MainHeroSection />
-            <div className='pb-12' />
-            <MainServiceSection />
-            <TanStackRouterDevtools />
+            <MainHeroSection/>
+            <div className='pb-12'/>
+            <MainServiceSection/>
+            <div className='pb-12'/>
+            <MainReviewSection />
+            <TanStackRouterDevtools/>
         </>
     )
 }

@@ -24,7 +24,7 @@ export default function MainHeroSection() {
                     <InfoItem icon={clock} text='Пн-Вс 8:00-21:00'/>
                 </p>
                 <Button
-                    color="bg-deep-purple-black"
+                    color="bg-deep-purple-black text-white"
                     link="#"
                     className='inline-flex text-2xl hover:bg-black'
                     buttonText="Записаться на приём"/>
